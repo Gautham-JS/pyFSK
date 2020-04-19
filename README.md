@@ -24,5 +24,6 @@ Since the output signal is a **continous time signal**, we sample the signals at
 We use 100samples of a standard sinewave of frequency `fskFreq1` for bit1 and 100samples of standard sinewave of frequency `fskFreq2` for bit0.
 
 After iterating for every bit in the 16bit sequence, we obtain the FSK signal which has Frequency `fskFreq1` if bit is 1 and `fskFreq2` if bit is zero.
+**The output FSK is :**
 
 Upon doing Fourier transform of the FSK signal, we obtain 2 significant peaks at the 2 FSK frequencies used. 
