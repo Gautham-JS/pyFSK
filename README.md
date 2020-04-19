@@ -38,3 +38,22 @@ After iterating for every bit in the 16bit sequence, we obtain the FSK signal wh
 
 ![Demodulated output](/FSK_screencaps/FSKdemod.png)
 
+## Explanation of FSK_compression.py :
+This code uses the functions defined in FSK.py for modulation and demodulation and uses it for a practical application of FSK in digital Data Compression using concepts from FFT Image Compression techniques. 
+The inspiration for this section comes from a brilliant explanation of FFT Image Compression by University of Washington : https://cosmolearning.org/video-lectures/fft-image-compression/
+
+Similar to Image Compression, we use a 1 Dimentional bit stream instead of 2 Dimentional images. As the video above explains, if we create random numbers for each pixel of an image, we obtain white noise. That image will look like TV static and the FFT of such an image gives no significant peaks and thus cannot be compressed. Most natural images have an order in the pixels  while going sequentially and rarely have abrupt value changes. These images FFT gives few significant Peaks. Truncating all minor values and transmitting only the Peak Values is sufficient to reconstruct the image at the receiver using IFFT thus significantly saving bandwidth. An image is more compressible if the pixels are more ordered rather than random, a detailed picture of a rainforest is less compressible than a picture of the night sky.
+
+In our case we are using a random 16bit sequence, this randomness and lack of order prevents the use of direct FFT compression of digital datastreams as there would be a lot of peaks. Horrible for compression. This is where FSK comes in.
+
+FSK converts the Bit Sequence to 2 quantifiable frequencies , `fskFreq1` and `fskFreq2`, the frequency spectrum of FSK only contains 2 peaks making it highly compressible.compression contains the function `FFTcompression(fftsig,threshold)` This function takes 2 arguments FFT of FSK signal(Frequency spectrum) and threshold. It truncates all values below Threshold in amplitude to zero thus truncating all the minor peaks in the spectrum it returns this truncated Frequency Spectrum.
+
+This truncated FFT spectrm if transmitted can save significant bandwidth in comparison to complete FSK sequence. 
+
+When we compute IFFT of this truncated FFT Spectrum, we obtain a distorted version of the input FSK sequence. This distortion arises due to discontinuities in the FSK spectrum at the input generally when bit changes. 
+
+This distorted FSK is distorted more in the amplitude and waveshape and the frequency domain is rather unaffected due to existence of major peaks in FFT spectrum.
+
+Thus using a standard demodulation of FSK (Zero Crossing Detectior) gives the input waveform.
+
+
