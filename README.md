@@ -30,4 +30,6 @@ After iterating for every bit in the 16bit sequence, we obtain the FSK signal wh
 ![FSK](/FSK_screencaps/FSK_updated.png)
 
 
-Upon doing Fourier transform of the FSK signal, we obtain 2 significant peaks at the 2 FSK frequencies used. 
+**Upon doing Fourier transform of the FSK signal, we obtain 2 significant peaks at the 2 FSK frequencies used.**
+
+![FFT of FSK](/FSK_screencaps/FSKfft.png)
