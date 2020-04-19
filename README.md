@@ -25,12 +25,12 @@ We use 100samples of a standard sinewave of frequency `fskFreq1` for bit1 and 10
 
 After iterating for every bit in the 16bit sequence, we obtain the FSK signal which has Frequency `fskFreq1` if bit is 1 and `fskFreq2` if bit is zero.
 
-**The output FSK for sequence [1101100011001000] is :**
+**The output FSK for sequence [1101100011001000] with `fskFreq1=2`, `fskFreq2=0.9` is :**
 
 ![FSK](/FSK_screencaps/FSK_updated.png)
 
 
-**Upon doing Fourier transform of the FSK signal, we obtain 2 significant peaks at the 2 FSK frequencies used :**
+**Upon doing Fourier transform of the FSK signal, we obtain frequency spectrum with 2 significant peaks at the 2 FSK frequencies used :**
 
 ![FFT of FSK](/FSK_screencaps/FSKfft.png)
 
