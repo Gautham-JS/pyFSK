@@ -3,7 +3,7 @@
 ---> 18-April-2020
 ---> FSK Modulation and demodulation - Assignment 4, Digital Communiction
 
-Hello Sir, The Following code shows FSK modulation and demodulation process with an arbitary 16 bit digital Input and 2 more inputs : frequency correesponding to bit 1 and another for bit 0
+The Following code shows FSK modulation and demodulation process with an arbitary 16 bit digital Input and 2 more inputs : frequency correesponding to bit 1 and another for bit 0
 The Stepwise explanation is given before significant lines in code.
 
 This code is not plagerized and was written purely logically by Myself with the best of my knowledge.
