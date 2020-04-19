@@ -39,7 +39,7 @@ After iterating for every bit in the 16bit sequence, we obtain the FSK signal wh
 ![Demodulated output](/FSK_screencaps/FSKdemod.png)
 
 ## Explanation of FSK_compression.py :
-This code uses the functions defined in FSK.py for modulation and demodulation and uses it for a practical application of FSK in **digital Data Compression using concepts from FFT Image Compression techniques.** 
+This code uses the functions defined in FSK.py for modulation and demodulation and uses it for a practical application of FSK in **digital Data Compression using concepts from FFT Image Compression techniques.** This isnt part of the assignment, just did it for fun. 
 The inspiration for this section comes from a brilliant explanation of FFT Image Compression by University of Washington : https://cosmolearning.org/video-lectures/fft-image-compression/
 
 Similar to Image Compression, we use a 1 Dimentional bit stream instead of 2 Dimentional images. As the video above explains, if we create random numbers for each pixel of an image, we obtain white noise. That image will look like TV static and the FFT of such an image gives no significant peaks and thus cannot be compressed. **Most natural images have an order in the pixels  while going sequentially and rarely have abrupt value changes. These images FFT gives few significant Peaks. Truncating all minor values and transmitting only the Peak Values is sufficient to reconstruct the image at the receiver using IFFT thus significantly saving bandwidth.** An image is more compressible if the pixels are more ordered rather than random, a detailed picture of a rainforest is less compressible than a picture of the night sky.
