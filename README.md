@@ -1,6 +1,6 @@
 # pyFSK
 This code is part of the assignment given for the course Digital Communication.
-We use a standard binary data as an input signal, randomly generated 16bit array in code.
+We use a standard binary data as an input signal, (randomly generated 16bit array in code).
 
 The dependencies required for the compilation in python3 are:
 1. Numpy 
