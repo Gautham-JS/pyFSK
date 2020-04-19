@@ -38,7 +38,7 @@ After iterating for every bit in the 16bit sequence, we obtain the FSK signal wh
 
 ![Demodulated output](/FSK_screencaps/FSKdemod.png)
 
-## Explanation of FSK_compression.py :
+## Explanation of FSK_compression.py(Application):
 This code uses the functions defined in FSK.py for modulation and demodulation and uses it for a practical application of FSK in **digital Data Compression using concepts from FFT Image Compression techniques.** This isnt part of the assignment, just did it for fun. 
 The inspiration for this section comes from a brilliant explanation of FFT Image Compression by University of Washington : https://cosmolearning.org/video-lectures/fft-image-compression/
 
